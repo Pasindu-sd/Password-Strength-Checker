@@ -1,0 +1,3 @@
+# requirements.txt
+# No external dependencies needed for basic version
+# For advanced version: requests>=2.25.1
