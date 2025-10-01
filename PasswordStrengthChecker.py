@@ -102,6 +102,8 @@ def main():
         strength = checker.get_strength_level(score)
         
         print(f"\nPassword Strength: {strength}")
+        print(f"Score: {score}/5")
+        print(f"Entropy: {entropy} bits")
         
         print("\nFeedback:")
         for item in feedback:
@@ -113,3 +115,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
