@@ -11,7 +11,7 @@ def check_password(password):
     # Collect errors
     errors = []
     if check_common_passwords(password):
-        errors.append("Password is too common. Choose a more unique password.")
+        errors.append("Password is too common. Use a more unique password.")
     if length_error:
         errors.append("Password must be at least 8 characters long.")
     if digit_error:
