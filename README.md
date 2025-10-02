@@ -28,7 +28,7 @@ Weak password:
 - Password must contain at least one special character (@$!%*?&)
 
 ---
-
+```
 🚧 Under Development - Coming Soon
-
+```
 ---
