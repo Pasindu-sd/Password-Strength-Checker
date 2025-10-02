@@ -10,6 +10,8 @@ def check_password(password):
 
     # Collect errors
     errors = []
+    if check_common_passwords(password):
+        errors.append("Password is too common. Choose a more unique password.")
     if length_error:
         errors.append("Password must be at least 8 characters long.")
     if digit_error:
@@ -27,7 +29,10 @@ def check_password(password):
     else:
         return "Weak password:\n- " + "\n- ".join(errors)
 
-
+def check_common_passwords(password):
+    common_passwords = {'password', '12345678'}
+    return password.lower() in common_passwords
+    
 # Example usage
 password = input("Enter a password: ")
 print(check_password(password))
