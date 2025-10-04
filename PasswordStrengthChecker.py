@@ -1,38 +1,23 @@
 import re
 
 def check_password(password):
-    # Rules
-    length_error = len(password) < 8
-    digit_error = re.search(r"\d", password) is None
-    uppercase_error = re.search(r"[A-Z]", password) is None
-    lowercase_error = re.search(r"[a-z]", password) is None
-    symbol_error = re.search(r"[@$!%*?&]", password) is None
-
-    # Collect errors
+    common = {'password', '12345678'}
     errors = []
-    if check_common_passwords(password):
-        errors.append("Password is too common. Use a more unique password.")
-    if length_error:
-        errors.append("Password must be at least 8 characters long.")
-    if digit_error:
-        errors.append("Password must contain at least one number.")
-    if uppercase_error:
-        errors.append("Password must contain at least one uppercase letter.")
-    if lowercase_error:
-        errors.append("Password must contain at least one lowercase letter.")
-    if symbol_error:
-        errors.append("Password must contain at least one special character (@$!%*?&).")
 
-    # Result
-    if not errors:
-        return "Strong password!"
-    else:
-        return "Weak password:\n- " + "\n- ".join(errors)
+    if password.lower() in common:
+        errors.append("Too common, use a unique password.")
+    if len(password) < 8:
+        errors.append("Must be at least 8 characters.")
+    if not re.search(r"\d", password):
+        errors.append("Add at least one number.")
+    if not re.search(r"[A-Z]", password):
+        errors.append("Add at least one uppercase letter.")
+    if not re.search(r"[a-z]", password):
+        errors.append("Add at least one lowercase letter.")
+    if not re.search(r"[@$!%*?&]", password):
+        errors.append("Add at least one special character (@$!%*?&).")
 
-def check_common_passwords(password):
-    common_passwords = {'password', '12345678'}
-    return password.lower() in common_passwords
-    
+    return "Strong password!" if not errors else "Weak password:\n- " + "\n- ".join(errors)
+
 # Example usage
-password = input("Enter a password: ")
-print(check_password(password))
+print(check_password(input("Enter a password: ")))
