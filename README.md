@@ -24,8 +24,8 @@ Strong password!
 ```
 
 Enter a password: password
-Weak password:
 
+- Weak password:
 - Too common, use a unique password.
 - Add at least one number.
 - Add at least one uppercase letter.
