@@ -37,4 +37,20 @@ Weak password:
 🚧 Under Development - Coming Soon
 ```
 
+## Demo 🎬
+
+```bash
+Enter a password: Test@1234
+Strong password!
+```
+Enter a password: password
+Weak password:
+  - Password is too common. Choose a more unique password.
+  - Password must contain at least one uppercase letter.
+  - Password must contain at least one special character (@$!%*?&)
+
+---
+```
+🚧 Under Development - Coming Soon
+```
 ---
