@@ -33,6 +33,22 @@ Enter a password: password
 
 ---
 
+<<<<<<< Updated upstream
+=======
+## Demo 🎬
+
+```bash
+Enter a password: Test@1234
+Strong password!
+```
+Enter a password: password
+Weak password:
+  - Password is too common. Choose a more unique password.
+  - Password must contain at least one uppercase letter.
+  - Password must contain at least one special character (@$!%*?&)
+
+---
+>>>>>>> Stashed changes
 ```
 🚧 Under Development - Coming Soon
 ```
